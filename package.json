@@ -1,0 +1,24 @@
+{
+  "name": "SdC-Seguridad",
+  "version": "1.0.0",
+  "description": "Stand para la SdC de seguridad",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lautaro Petaccio",
+  "license": "MIT",
+  "dependencies": {
+    "swig" : "^1.4.2",
+    "sqlite3" : "^3.1.4",
+    "express" : "^4.13.4",
+    "bootstrap" : "^3.3.6",
+    "jquery" : "^2.2.4",
+    "body-parser" : "^1.15.1"
+  },
+  "devDependencies": {}
+}
